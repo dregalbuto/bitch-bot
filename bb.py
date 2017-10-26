@@ -40,7 +40,7 @@ async def on_message(message):
 	if "hewwo" in message.content.lower():
 		await client.send_message(message.channel, 'HEWWO?!')
 
-	me = ("bitch-bot", "bitch bot")
+	me = ("bitch-bot", "bitch bot", 'bitchbot')
 	if any (s in message.content.lower() for s in me):
 		await client.send_message(message.channel, 'I\'m a sexy boy.')
 
@@ -117,12 +117,12 @@ async def on_message(message):
 		+ ' TO GO TO ICE HELL FTW')
 
 	if message.content.startswith('/pussy'):
-		msg = message.content.replace('/pussy ', '') 
+		msg = message.content.replace('/pussy', '') 
 		if len(msg) < 1:
 			await client.send_message(message.channel, 'What day is it?')
 			msg = (await client.wait_for_message(author=message.author)).content
 		await client.send_message(message.channel, 
-		'No offense but... it\'s {} '.format(msg)
+		'No offense but... it\'s {} '.format(msg.lstrip(' '))
 		+ '*rips wax strip off my pussy*')
 	
 	if message.content.startswith('/shawn'):
@@ -138,8 +138,6 @@ async def on_ready():
 	print('------')
 	today = calendar.day_name[date.today().weekday()]
 	await client.send_message(client.get_channel('370994252915671050'),
-		'No offense but... it\'s {} '.format(today)
-		+ '*rips wax strip off my pussy*')
-	print('!')
+		'Oh boy it\'s {} '.format(today))
 
 client.run('MzcwNjM2NzQzMDg0NDc0MzY5.DMvFkA.6_YuYKfKAqh7JCWN8cnsMdSMNZw')
