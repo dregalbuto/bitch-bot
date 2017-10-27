@@ -28,6 +28,7 @@ async def on_message(message):
 		+ '\n\t/lukas'
 		+ '\n\t/lukas2'
 		+ '\n\t/navyseal'
+		+ '\n\t/nick'
 		+ '\n\t/nico'
 		+ '\n\t/pissonme'
 		+ '\n\t/pussy [day optional]'
@@ -78,6 +79,10 @@ async def on_message(message):
 	if message.content.startswith('/nico'):
 		await client.send_message(message.channel, 
 		'bitch boy naughty')
+
+	if message.content.startswith('/nick'):
+		await client.send_message(message.channel, 
+		'nick robinson it takes a full day in any core game to shake apples from the same tree again you fucking troglodyte bitch idiot')
 
 	if message.content.startswith('/navyseal'):
 		await client.send_message(message.channel,
